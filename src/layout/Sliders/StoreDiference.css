@@ -18,6 +18,7 @@
   align-items: center;
   justify-content: center;
   gap: 1.4rem;
+  padding-left: 2rem;
 }
 
 .store-diference-card {
@@ -25,6 +26,7 @@
   padding: 0.5rem 0 0.5rem 1.5rem;
   align-items: center;
   width: 308px;
+  min-width: 298px;
   height: 64px;
   left: 645px;
   border-radius: 4px;
@@ -53,4 +55,10 @@
   font-weight: 700;
   line-height: 21px;
   color: #353535;
+}
+
+@media(min-width: 64rem) {
+  .store-diference-container {
+    padding-right: 0;
+  }
 }

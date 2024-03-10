@@ -1,0 +1,17 @@
+.slider-container-component {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ .slider-inner {
+  display: flex;
+  gap: 1rem;
+ }
+
+ .slider-component {
+  overflow: hidden;
+ }
+

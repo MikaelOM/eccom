@@ -1,9 +1,10 @@
-/* header {
+.header-off-top {
   position: fixed;
   z-index: 100;
   width: 100%;
   background-color: #fff;
-} */
+}
+
 .top-header {
   background: #353535;
   color: #fff;

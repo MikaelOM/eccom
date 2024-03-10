@@ -1,5 +1,5 @@
 .brands {
-  margin: 4rem 0 4rem 0;
+  margin: 2rem 0 2rem 0;
   width: 100%;
   overflow: hidden;
 }
@@ -16,6 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-left: 2rem;
 }
 
 .brands-images-container img {
@@ -23,8 +24,22 @@
  height: 64px;
 }
 
+.brands-images-container .slider-component {
+  height: 90px;
+}
+
+.slider-item {
+  box-shadow: 0 4px 8px rgb(86 115 101/15%);
+}
+
 @media(min-width: 1920px) {
   .brands-images-container {
     gap: 1.4rem;
+  }
+}
+
+@media(min-width: 64rem) {
+  .brands-images-container {
+    padding-left: 0;
   }
 }

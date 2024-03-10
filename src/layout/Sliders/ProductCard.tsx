@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { isMobile } from "react-device-detect";
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -7,6 +8,8 @@ import productImage1 from '../assets/productImage/Produto1.png'
 import productImage2 from '../assets/productImage/Produto2.png'
 
 import './ProductCard.css'
+import { MobileSliderProps } from "./MobileSlider/MobileSlider";
+import { motion } from "framer-motion";
 
 const products = [
   {
@@ -123,26 +126,52 @@ export function ProductCard() {
   };
 
   return (
-    <>
+    <div className="product-card-container">
       <h3 className="title-shelf">As mais pedidas</h3>
-      <Slider {...settings}>
-          {products.map((item) => (
-            <div key={item.id} className="product-card">
-              <img src={item.productImage} alt="product image" />
-              <div>
-                <div className="product-variation-container">
-                  {item.variations.map((item) => (
-                    <div key={item}className='product-variation' style={{'background': item}}></div>
-                  ))}
+      {!isMobile ? (
+        <Slider {...settings}>
+            {products.map((item) => (
+              <div key={item.id} className="product-card">
+                <img src={item.productImage} alt="product image" />
+                <div>
+                  <div className="product-variation-container">
+                    {item.variations.map((item) => (
+                      <div key={item}className='product-variation' style={{'background': item}}></div>
+                    ))}
+                  </div>
+                  <p className="product-value">R$ {item.value}</p>
+                  <p className="product-name">{item.productName}</p>
+                  <p className="product-description">{item.productDescription}</p>
+                  <button>Adicionar</button>
                 </div>
-                <p className="product-value">R$ {item.value}</p>
-                <p className="product-name">{item.productName}</p>
-                <p className="product-description">{item.productDescription}</p>
-                <button>Adicionar</button>
               </div>
-            </div>
-          ))}
+            ))}
         </Slider>
-    </>
+      ) : (
+        <MobileSliderProps>
+          
+            {products.map((item) => (
+              <motion.div className='slider-item' key={item.id}>
+                <div className="product-card">
+                  <img src={item.productImage} alt="product image" />
+                  <div>
+                    <div className="product-variation-container">
+                      {item.variations.map((item) => (
+                        <div key={item}className='product-variation' style={{'background': item}}></div>
+                      ))}
+                    </div>
+                    <p className="product-value">R$ {item.value}</p>
+                    <p className="product-name">{item.productName}</p>
+                    <p className="product-description">{item.productDescription}</p>
+                    <button>Adicionar</button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          
+        </MobileSliderProps>
+      )
+      }
+    </div>
   )
 }

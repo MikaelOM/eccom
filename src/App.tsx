@@ -18,8 +18,6 @@ export function App() {
   const closeModal = () => {
     setIsModalOpen(false);
   }
-
-  // console.log(isModalOpen)
   
   return (
     <>
@@ -28,8 +26,8 @@ export function App() {
         <FirstSlider />
         <StoreDiference />
         <Brands />
+        <ProductCard />
         <section className='content-page'>
-          <ProductCard />
           <ColectionCard />
         </section>
         <Newsletter />

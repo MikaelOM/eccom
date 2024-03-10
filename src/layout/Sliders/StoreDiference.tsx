@@ -1,8 +1,13 @@
+import { isMobile } from 'react-device-detect'
+
+import { MobileSliderProps } from './MobileSlider/MobileSlider'
+
 import globoImage from '../assets/StoreDiference/globo.png'
 import houseImage from '../assets/StoreDiference/house.png'
 import discountImage from '../assets/StoreDiference/discount.png'
 
 import './StoreDiference.css'
+import { motion } from 'framer-motion'
 
 const dataCard = [
   {
@@ -42,15 +47,32 @@ export function StoreDiference() {
     <section className="store-diference">
       <h3>Por que comprar em nossa Loja?</h3>
       <div className='store-diference-container'>
-        { dataCard.map((item) => (
-          <div key={item.title} className="store-diference-card">
-            <img src={item.image} alt={item.title} />
-            <div className='card-texts'>
-              <p className='card-title'>{item.title}</p>
-              <p>{item.text}</p>
+        {!isMobile ?
+          dataCard.map((item) => (
+            <div key={item.title} className="store-diference-card">
+              <img src={item.image} alt={item.title} />
+              <div className='card-texts'>
+                <p className='card-title'>{item.title}</p>
+                <p>{item.text}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          )) : (
+            <MobileSliderProps>
+              {dataCard.map((item) => (
+                  <motion.div className='slider-item' key={item.title}>
+                    <div className="store-diference-card">
+                      <img src={item.image} alt={item.title} />
+                      <div className='card-texts'>
+                        <p className='card-title'>{item.title}</p>
+                        <p>{item.text}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+              ))}
+            </MobileSliderProps>
+          )
+        
+        }
       </div>
     </section>
   )
