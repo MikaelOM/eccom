@@ -1,0 +1,120 @@
+.carousel-indicators [data-bs-target] {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid #FAA500;
+  background: transparent;
+}
+
+.carousel-indicators .active {
+  background: #FAA500;
+}
+
+.slick-next {
+  right: 1.5rem;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='32' viewBox='0 0 20 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.9047 17.2436L4.6633 31.4849C3.97646 32.1717 2.86291 32.1717 2.17613 31.4849L0.515117 29.8238C-0.170556 29.1382 -0.171875 28.0269 0.512186 27.3396L11.7987 16L0.512186 4.66039C-0.171875 3.9731 -0.170556 2.86182 0.515117 2.17615L2.17613 0.515134C2.86298 -0.171711 3.97653 -0.171711 4.6633 0.515134L18.9046 14.7564C19.5914 15.4432 19.5914 16.5567 18.9047 17.2436Z' fill='%23353535'/%3E%3C/svg%3E%0A");
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% 100%;
+  color: #000;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='32' viewBox='0 0 20 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.9047 17.2436L4.6633 31.4849C3.97646 32.1717 2.86291 32.1717 2.17613 31.4849L0.515117 29.8238C-0.170556 29.1382 -0.171875 28.0269 0.512186 27.3396L11.7987 16L0.512186 4.66039C-0.171875 3.9731 -0.170556 2.86182 0.515117 2.17615L2.17613 0.515134C2.86298 -0.171711 3.97653 -0.171711 4.6633 0.515134L18.9046 14.7564C19.5914 15.4432 19.5914 16.5567 18.9047 17.2436Z' fill='%23353535'/%3E%3C/svg%3E%0A");
+  transform: rotate(180deg);
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% 100%;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  opacity: unset;
+}
+
+
+img {
+  height: 320px;
+}
+
+.carousel-item .title {
+  max-width: 239px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36.57px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 15px 0;
+}
+
+.carousel-item .text {
+  max-width: 239px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.07px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.carousel-caption button {
+  width: 128px;
+  height: 48px;
+  top: 320px;
+  left: 323px;
+  padding: 14px, 30px, 14px, 30px;
+  border-radius: 10px;
+  background: #FAA500;
+  color: #fff;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.carousel-caption {
+  bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media(min-width: 64rem) {
+
+  img {
+    height: 600px;
+  }
+
+  .carousel-item .title {
+    max-width: unset;
+    font-size: 40px;
+    line-height: 49px;
+  }
+
+  .carousel-item .text {
+    max-width: 467px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .carousel-indicators [data-bs-target] {
+    width: 16px;
+    height: 16px;
+  }
+
+  .carousel-caption {
+    bottom: 12rem;
+  }
+}

@@ -1,0 +1,30 @@
+.brands {
+  margin: 4rem 0 4rem 0;
+  width: 100%;
+  overflow: hidden;
+}
+.brands h3 {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 49px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.brands-images-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brands-images-container img {
+ width: 308px;
+ height: 64px;
+}
+
+@media(min-width: 1920px) {
+  .brands-images-container {
+    gap: 1.4rem;
+  }
+}

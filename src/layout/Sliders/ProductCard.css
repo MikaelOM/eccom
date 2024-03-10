@@ -1,0 +1,120 @@
+.title-shelf {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 49px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #353535;
+}
+
+.product-card {
+  width: 308px!important;
+  font-family: 'Titillium Web', sans-serif;
+  max-width: 308px;
+  text-align: left;
+  color: #000;
+}
+
+.product-card img {
+  width: 308px;
+  height: 381px;
+}
+
+.product-card button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 2rem;
+  height: 35px;
+}
+
+.product-card div {
+  padding: 0.5rem 1.2rem;
+}
+
+.product-variation-container {
+  display: flex;
+  padding: 0!important;
+  gap: 0.5rem;
+}
+
+.product-variation {
+  width: 27px;
+  height: 27px;
+  border-radius: 4px;
+  padding: 0!important;
+}
+
+.product-value {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #353535;
+  margin-bottom: 0.5rem;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.product-description {
+  width: 254px;
+  height: 54px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  opacity: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.slick-arrow {
+  display: none;
+}
+
+/* .slick-slide {
+  width: 308px!important;
+} */
+
+
+@media(min-width: 64rem) {
+  .product-card {
+    width: unset;
+  }
+  /* .slick-slide {
+    width: unset;
+  } */
+
+  .slick-next::before {
+    content: url("data:image/svg+xml,%3Csvg width='20' height='32' viewBox='0 0 20 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.9047 17.2436L4.6633 31.4849C3.97646 32.1717 2.86291 32.1717 2.17613 31.4849L0.515117 29.8238C-0.170556 29.1382 -0.171875 28.0269 0.512186 27.3396L11.7987 16L0.512186 4.66039C-0.171875 3.9731 -0.170556 2.86182 0.515117 2.17615L2.17613 0.515134C2.86298 -0.171711 3.97653 -0.171711 4.6633 0.515134L18.9046 14.7564C19.5914 15.4432 19.5914 16.5567 18.9047 17.2436Z' fill='%23353535'/%3E%3C/svg%3E%0A");
+    opacity: unset;
+  }
+  
+  .slick-prev::before {
+    content: url("data:image/svg+xml,%3Csvg width='20' height='32' viewBox='0 0 20 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.9047 17.2436L4.6633 31.4849C3.97646 32.1717 2.86291 32.1717 2.17613 31.4849L0.515117 29.8238C-0.170556 29.1382 -0.171875 28.0269 0.512186 27.3396L11.7987 16L0.512186 4.66039C-0.171875 3.9731 -0.170556 2.86182 0.515117 2.17615L2.17613 0.515134C2.86298 -0.171711 3.97653 -0.171711 4.6633 0.515134L18.9046 14.7564C19.5914 15.4432 19.5914 16.5567 18.9047 17.2436Z' fill='%23353535'/%3E%3C/svg%3E%0A");
+    transform: rotate(180deg);
+    display: inline-block;
+    opacity: unset;
+  }
+  
+  .slick-next {
+    right: 25px;
+  }
+
+  .slick-prev {
+    left: 25px;
+    z-index: 999;
+  }
+
+}
+
